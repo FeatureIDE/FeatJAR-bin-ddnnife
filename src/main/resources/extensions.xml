@@ -2,5 +2,6 @@
 <extensions>
     <point id="de.featjar.base.env.Binaries">
         <extension id="de.featjar.bin.ddnnife.DdnnifeBinary" />
+        <extension id="de.featjar.bin.ddnnife.D4Binary" />
     </point>
 </extensions>
