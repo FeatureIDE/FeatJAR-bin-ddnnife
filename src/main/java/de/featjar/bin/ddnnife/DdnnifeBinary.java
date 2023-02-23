@@ -20,22 +20,23 @@
  */
 package de.featjar.bin.ddnnife;
 
-import de.featjar.base.data.Sets;
-import de.featjar.base.env.ABinary;
-import de.featjar.base.env.HostEnvironment;
+import de.featjar.util.bin.Binary;
+import de.featjar.util.bin.OperatingSystem;
 import java.io.IOException;
-import java.util.LinkedHashSet;
+import java.nio.file.Path;
+import java.util.Set;
 
-public class DdnnifeBinary extends ABinary {
+public class DdnnifeBinary extends Binary {
     public DdnnifeBinary() throws IOException {}
 
     @Override
-    public String getExecutableName() {
-        return HostEnvironment.isWindows() ? "" : "ddnnife";
+    public Path getPath() {
+        if (OperatingSystem.IS_WINDOWS) return BINARY_DIRECTORY.resolve("");
+        else return BINARY_DIRECTORY.resolve("ddnnife");
     }
 
     @Override
-    public LinkedHashSet<String> getResourceNames() {
-        return HostEnvironment.isWindows() ? Sets.of("") : Sets.of("ddnnife");
+    public Set<String> getResourceNames() {
+        return OperatingSystem.IS_WINDOWS ? Set.of("") : Set.of("ddnnife");
     }
 }
