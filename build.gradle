@@ -8,6 +8,6 @@ dependencies {
 
 license {
     ext {
-        url = 'https://github.com/FeatureIDE/FeatJAR-bin-ddnnife'
+        licence_url = 'https://github.com/FeatureIDE/FeatJAR-bin-ddnnife'
     }
 }
