@@ -3,12 +3,11 @@ plugins {
 }
 
 dependencies {
-    api 'de.featjar:util'
+    api 'de.featjar:base'
 }
 
 license {
     ext {
-        author = 'Sebastian Krieter, Elias Kuiter'
         url = 'https://github.com/FeatureIDE/FeatJAR-bin-ddnnife'
     }
 }
